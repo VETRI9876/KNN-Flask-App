@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knn-flask-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: knn-flask
+  template:
+    metadata:
+      labels:
+        app: knn-flask
+    spec:
+      containers:
+      - name: knn-flask-container
+        image: 409784048198.dkr.ecr.eu-north-1.amazonaws.com/vetri:latest
+        ports:
+        - containerPort: 5000
