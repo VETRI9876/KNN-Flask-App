@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/KNN-Flask-App.git'
+                git 'https://github.com/VETRI9876/KNN-Flask-App.git'
             }
         }
 
