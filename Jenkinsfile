@@ -5,6 +5,8 @@ pipeline {
         ECR_REPO = '409784048198.dkr.ecr.eu-north-1.amazonaws.com/vetri'
         IMAGE_TAG = 'latest'
         AWS_REGION = 'eu-north-1'
+        // Extend the PATH so sonar-scanner can be found during the pipeline execution
+        PATH = "${PATH}:/opt/sonar-scanner/bin"
     }
 
     stages {
